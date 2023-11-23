@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-color: rgb(232, 234, 236);
+    --main-color: rgb(8, 7, 7);
+}
+
+.container{
+    background: var(--background-color);
+    color: var(--main-color);
+    height: 100vh;
+    width: 50vw;
+    
+}
+
+span{
+    padding: 0 1em;
+}
+.list{
+    width: 14em;
+    height: 2em;
+    padding: 1em 0;
+}
