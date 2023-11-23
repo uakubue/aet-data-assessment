@@ -11,7 +11,7 @@
 .container{
     background: var(--background-color);
     color: var(--main-color);
-    height: 100vh;
+    height: 60vh;
     width: 50vw;
     
 }
