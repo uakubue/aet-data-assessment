@@ -11,7 +11,7 @@ const Albums = () => {
     const fetchData = async() => {
         const artistAPi = 'https://jsonplaceholder.typicode.com/users';
         const albumApi = 'https://jsonplaceholder.typicode.com/albums';
-        const photoApi = 'https://jsonplaceholder.typicode.com/albums/1/photos'
+        const photoApi = 'https://jsonplaceholder.typicode.com/albums/1/photos';
 
         //Using Axios to fetch DATA from the Api endpoint
         await axios.get(artistAPi)
@@ -22,23 +22,13 @@ const Albums = () => {
         .then(response => setAlbumName(response.data))
         .catch(error => console.error(error))
 
-        try{
-            await axios.get(photoApi)
-            .then(response => setPhotos(response.data))
-            console.log(photos)
-        }catch(error){
-            console.error(error)
-        }
-
-        // if(artistName.id == albumName.userId){
-        //     albumName.sort(function(a,b){artistName,albumName})
-            
-        // }else{
-        //     return null
-        // }
         
+        await axios.get(photoApi)
+        .then(response => setPhotos(response.data))
+        .catch(error => console.log(error))    
        
     }
+    console.log(photos)
 
     useEffect(() => {
         fetchData()
